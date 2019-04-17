@@ -6,6 +6,5 @@ pluginManagement {
 rootProject.name = 'demo'
 include 'core'
 include 'rest'
-include 'database'
 include 'app'
-
+include 'database-h2'

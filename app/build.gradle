@@ -26,6 +26,6 @@ repositories { mavenCentral() }
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     compile project(":core")
-    compile project(":database")
+    compile project(":database-h2")
     compile project(":rest")
 }
