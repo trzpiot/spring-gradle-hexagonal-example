@@ -18,10 +18,9 @@ sourceCompatibility = 1.8
 repositories { mavenCentral() }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

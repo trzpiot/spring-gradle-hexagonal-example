@@ -18,12 +18,13 @@ sourceCompatibility = 1.8
 repositories { mavenCentral() }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    runtimeOnly 'com.h2database:h2'
     compile project(":core")
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.3'
+    runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    compile('org.springframework.boot:spring-boot-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
