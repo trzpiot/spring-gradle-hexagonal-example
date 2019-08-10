@@ -1,12 +1,12 @@
 package de.trzpiot.hexagonal.example.database.h2.domain;
 
-import lombok.Data;
+import lombok.Value;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Data
+@Value
 @Entity
 public class PersonEntity {
     @Id

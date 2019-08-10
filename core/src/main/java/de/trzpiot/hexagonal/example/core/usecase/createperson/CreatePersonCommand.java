@@ -1,4 +1,4 @@
-package de.trzpiot.hexagonal.example.core.usecase.createPerson;
+package de.trzpiot.hexagonal.example.core.usecase.createperson;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

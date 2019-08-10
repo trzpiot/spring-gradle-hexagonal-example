@@ -1,7 +1,7 @@
 package de.trzpiot.hexagonal.example.rest;
 
-import de.trzpiot.hexagonal.example.core.usecase.createPerson.CreatePersonCommand;
-import de.trzpiot.hexagonal.example.core.usecase.createPerson.CreatePersonUseCase;
+import de.trzpiot.hexagonal.example.core.usecase.createperson.CreatePersonCommand;
+import de.trzpiot.hexagonal.example.core.usecase.createperson.CreatePersonUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package de.trzpiot.hexagonal.example.core.usecase.getPerson;
+package de.trzpiot.hexagonal.example.core.usecase.getperson;
 
 import de.trzpiot.hexagonal.example.core.domain.Person;
 

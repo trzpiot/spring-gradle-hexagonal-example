@@ -8,9 +8,6 @@ dependencies {
     // H2 Database
     runtimeOnly 'com.h2database:h2'
 
-    // ModelMapper
-    compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.3'
-
     // Lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

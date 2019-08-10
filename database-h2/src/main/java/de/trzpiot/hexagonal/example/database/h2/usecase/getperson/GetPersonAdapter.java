@@ -1,7 +1,7 @@
-package de.trzpiot.hexagonal.example.database.h2.usecase.getPerson;
+package de.trzpiot.hexagonal.example.database.h2.usecase.getperson;
 
 import de.trzpiot.hexagonal.example.core.domain.Person;
-import de.trzpiot.hexagonal.example.core.usecase.getPerson.GetPersonPort;
+import de.trzpiot.hexagonal.example.core.usecase.getperson.GetPersonPort;
 import de.trzpiot.hexagonal.example.database.h2.domain.PersonEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
