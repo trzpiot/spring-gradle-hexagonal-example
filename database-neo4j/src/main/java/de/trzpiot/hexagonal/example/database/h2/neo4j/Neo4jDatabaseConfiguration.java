@@ -1,4 +1,4 @@
-package com.example.demo.database.neo4j;
+package de.trzpiot.hexagonal.example.database.h2.neo4j;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
