@@ -3,7 +3,7 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'demo'
+rootProject.name = 'hexagonal-example'
 include 'core'
 include 'rest'
 include 'app'
