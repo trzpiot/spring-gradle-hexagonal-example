@@ -1,4 +1,4 @@
-package com.example.demo.database;
+package de.trzpiot.hexagonal.example.database.h2;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.autoconfigure.domain.EntityScan;

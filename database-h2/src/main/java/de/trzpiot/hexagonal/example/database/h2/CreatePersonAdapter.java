@@ -1,7 +1,7 @@
-package com.example.demo.database.neo4j;
+package de.trzpiot.hexagonal.example.database.h2;
 
-import com.example.demo.core.CreatePersonPort;
-import com.example.demo.core.Person;
+import de.trzpiot.hexagonal.example.core.CreatePersonPort;
+import de.trzpiot.hexagonal.example.core.Person;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

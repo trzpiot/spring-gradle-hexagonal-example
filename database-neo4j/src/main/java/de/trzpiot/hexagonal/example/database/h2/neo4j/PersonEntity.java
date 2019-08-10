@@ -1,11 +1,11 @@
-package com.example.demo.database.neo4j;
+package de.trzpiot.hexagonal.example.database.h2.neo4j;
 
 import lombok.Data;
 import org.neo4j.ogm.annotation.NodeEntity;
 
 @Data
 @NodeEntity
-public class PersonEntity {
+class PersonEntity {
     Long id;
     String name;
     String firstName;

@@ -1,9 +1,10 @@
-package com.example.demo.core;
+package de.trzpiot.hexagonal.example.core;
 
 import lombok.Data;
 
 @Data
-public class CreatePersonCommand {
+public class Person {
+    Long id;
     String name;
     String firstName;
     Integer age;

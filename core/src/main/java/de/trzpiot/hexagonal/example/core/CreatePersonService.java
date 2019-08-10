@@ -1,4 +1,4 @@
-package com.example.demo.core;
+package de.trzpiot.hexagonal.example.core;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
