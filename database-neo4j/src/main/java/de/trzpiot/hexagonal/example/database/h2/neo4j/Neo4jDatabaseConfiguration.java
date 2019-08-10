@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 
 @Configuration
-@EnableNeo4jRepositories(basePackages = "com.example.demo.database")
-@EntityScan(basePackages = "com.example.demo.database")
+@EnableNeo4jRepositories(basePackages = "de.trzpiot.hexagonal.example.database.neo4j")
+@EntityScan(basePackages = "de.trzpiot.hexagonal.example.database.neo4js")
 public class Neo4jDatabaseConfiguration {
     @Bean
     public ModelMapper modelMapper() {

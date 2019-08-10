@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "com.example.demo.database")
-@EntityScan(basePackages = "com.example.demo.database")
+@EnableJpaRepositories(basePackages = "de.trzpiot.hexagonal.example.database.h2")
+@EntityScan(basePackages = "de.trzpiot.hexagonal.example.database.h2")
 public class SqlDatabaseConfiguration {
     @Bean
     public ModelMapper modelMapper() {

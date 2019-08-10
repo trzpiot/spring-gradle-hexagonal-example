@@ -1,31 +1,9 @@
-buildscript {
-    ext { springBootVersion = '2.1.4.RELEASE' }
-    repositories { mavenCentral() }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
-
-plugins {
-    id "io.spring.dependency-management" version "1.0.7.RELEASE"
-}
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
-
-bootJar {
-    baseName = 'demo-app'
-    version = '0.0.1-SNAPSHOT'
-}
-sourceCompatibility = 1.8
-
-repositories { mavenCentral() }
-
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+    // Internal project dependencies
     compile project(":core")
     compile project(":database-h2")
     compile project(":rest")
+
+    // Spring Boot Starters
+    implementation 'org.springframework.boot:spring-boot-starter'
 }

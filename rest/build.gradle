@@ -1,31 +1,14 @@
-buildscript {
-    repositories { mavenCentral() }
-}
-
-plugins { id "io.spring.dependency-management" version "1.0.7.RELEASE" }
-
-ext { springBootVersion = '2.1.4.RELEASE' }
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-
-jar {
-    baseName = 'demo-database'
-    version = '0.0.1-SNAPSHOT'
-}
-sourceCompatibility = 1.8
-
-repositories { mavenCentral() }
-
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // Internal project dependencies
     compile project(":core")
+
+    // Spring Boot Starters
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    compile('org.springframework.boot:spring-boot-starter')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-}
 
-dependencyManagement {
-    imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
+    // Testing
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
