@@ -1,5 +1,6 @@
-package de.trzpiot.hexagonal.example.core;
+package de.trzpiot.hexagonal.example.core.usecase.createPerson;
 
+import de.trzpiot.hexagonal.example.core.domain.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +15,6 @@ public class CreatePersonService implements CreatePersonUseCase {
 
     @Override
     public Long createPerson(CreatePersonCommand command) {
-        Person person = new Person();
-        person.setName(command.getName());
-        person.setFirstName(command.getFirstName());
-        person.setAge(command.getAge());
-        return createPersonPort.createPerson(person);
+        return createPersonPort.createPerson(new Person(null, command.getName(), command.getFirstName(), command.getAge()));
     }
 }

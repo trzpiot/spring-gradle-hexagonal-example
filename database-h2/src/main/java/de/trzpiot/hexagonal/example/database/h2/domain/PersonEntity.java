@@ -1,4 +1,4 @@
-package de.trzpiot.hexagonal.example.database.h2;
+package de.trzpiot.hexagonal.example.database.h2.domain;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-class PersonEntity {
+public class PersonEntity {
     @Id
     @GeneratedValue
     Long id;

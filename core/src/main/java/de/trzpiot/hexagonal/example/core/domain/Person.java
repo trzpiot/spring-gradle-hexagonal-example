@@ -1,8 +1,8 @@
-package de.trzpiot.hexagonal.example.core;
+package de.trzpiot.hexagonal.example.core.domain;
 
-import lombok.Data;
+import lombok.Value;
 
-@Data
+@Value
 public class Person {
     Long id;
     String name;
