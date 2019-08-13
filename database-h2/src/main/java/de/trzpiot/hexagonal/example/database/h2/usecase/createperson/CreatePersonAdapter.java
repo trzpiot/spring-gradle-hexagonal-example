@@ -17,7 +17,7 @@ public class CreatePersonAdapter implements CreatePersonPort {
 
     @Override
     public Long createPerson(Person person) {
-        PersonEntity personEntity = new PersonEntity(null, person.getName(), person.getFirstName(), person.getAge());
+        PersonEntity personEntity = new PersonEntity(person.getName(), person.getFirstName(), person.getAge());
         return createPersonRepository.save(personEntity).getId();
     }
 }
