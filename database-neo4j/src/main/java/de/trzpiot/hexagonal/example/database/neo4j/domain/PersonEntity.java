@@ -12,8 +12,8 @@ public class PersonEntity {
     private Integer age;
 
     /*
-     * We need this constructor and must use @Data instead of @Value, because Neo4j does not accept it when we create
-     * an object from this class and pass null as ID.
+     * We need this constructor, because Neo4j does not accept it when we create an object from this class and pass
+     * null as ID.
      */
     public PersonEntity(String name, String firstName, Integer age) {
         this.name = name;

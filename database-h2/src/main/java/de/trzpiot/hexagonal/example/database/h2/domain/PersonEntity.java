@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-// H2 needs a default constructor to create an object of this class. Therefore we have to use @Data instead of @Value.
+// H2 needs a default constructor to create an object of this class.
 @NoArgsConstructor
 public class PersonEntity {
     @Id
