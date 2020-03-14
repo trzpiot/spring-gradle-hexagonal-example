@@ -19,7 +19,7 @@ allprojects {
 
     dependencyManagement {
         imports {
-            mavenBom("org.springframework.boot:spring-boot-dependencies:2.2.4.RELEASE")
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.2.5.RELEASE")
         }
     }
 }
