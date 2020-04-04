@@ -13,12 +13,12 @@ public class GetPersonController {
     private final GetPersonUseCase getPersonUseCase;
 
     @Autowired
-    public GetPersonController(GetPersonUseCase getPersonUseCase) {
+    public GetPersonController(final GetPersonUseCase getPersonUseCase) {
         this.getPersonUseCase = getPersonUseCase;
     }
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<Person> getPerson(@PathVariable Long id) {
+    public ResponseEntity<Person> getPerson(@PathVariable final Long id) {
         return new ResponseEntity<>(getPersonUseCase.getPerson(id), HttpStatus.OK);
     }
 }

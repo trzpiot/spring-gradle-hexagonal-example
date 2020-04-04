@@ -7,7 +7,7 @@ import lombok.Value;
 @Value
 @NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
 public class CreatePersonCommand {
-    private String name;
-    private String firstName;
-    private Integer age;
+    String name;
+    String firstName;
+    Integer age;
 }

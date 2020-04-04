@@ -11,13 +11,13 @@ public class CreatePersonAdapter implements CreatePersonPort {
     private final CreatePersonRepository createPersonRepository;
 
     @Autowired
-    public CreatePersonAdapter(CreatePersonRepository createPersonRepository) {
+    public CreatePersonAdapter(final CreatePersonRepository createPersonRepository) {
         this.createPersonRepository = createPersonRepository;
     }
 
     @Override
-    public Long createPerson(Person person) {
-        PersonEntity personEntity = new PersonEntity(person.getName(), person.getFirstName(), person.getAge());
+    public Long createPerson(final Person person) {
+        final PersonEntity personEntity = new PersonEntity(person.getName(), person.getFirstName(), person.getAge());
         return createPersonRepository.save(personEntity).getId();
     }
 }

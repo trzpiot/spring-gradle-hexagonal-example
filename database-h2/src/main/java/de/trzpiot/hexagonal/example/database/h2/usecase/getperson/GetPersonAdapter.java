@@ -13,13 +13,13 @@ public class GetPersonAdapter implements GetPersonPort {
     private final GetPersonRepository getPersonRepository;
 
     @Autowired
-    public GetPersonAdapter(GetPersonRepository getPersonRepository) {
+    public GetPersonAdapter(final GetPersonRepository getPersonRepository) {
         this.getPersonRepository = getPersonRepository;
     }
 
     @Override
-    public Person getPerson(Long id) {
-        PersonEntity personEntity = getPersonRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(String.format("Person with ID '%d' not found", id)));
+    public Person getPerson(final Long id) {
+        final PersonEntity personEntity = getPersonRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(String.format("Person with ID '%d' not found", id)));
         return new Person(personEntity.getId(), personEntity.getName(), personEntity.getFirstName(), personEntity.getAge());
     }
 }

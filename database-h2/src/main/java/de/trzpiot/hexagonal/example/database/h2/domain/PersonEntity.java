@@ -20,7 +20,7 @@ public class PersonEntity {
     private String firstName;
     private Integer age;
 
-    public PersonEntity(String name, String firstName, Integer age) {
+    public PersonEntity(final String name, final String firstName, final Integer age) {
         this.name = name;
         this.firstName = firstName;
         this.age = age;

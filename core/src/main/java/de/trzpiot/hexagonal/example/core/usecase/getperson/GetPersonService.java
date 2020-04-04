@@ -9,12 +9,12 @@ public class GetPersonService implements GetPersonUseCase {
     private final GetPersonPort getPersonPort;
 
     @Autowired
-    public GetPersonService(GetPersonPort getPersonPort) {
+    public GetPersonService(final GetPersonPort getPersonPort) {
         this.getPersonPort = getPersonPort;
     }
 
     @Override
-    public Person getPerson(Long id) {
+    public Person getPerson(final Long id) {
         return getPersonPort.getPerson(id);
     }
 }

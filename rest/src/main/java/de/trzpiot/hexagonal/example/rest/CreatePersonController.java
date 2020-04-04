@@ -13,12 +13,12 @@ public class CreatePersonController {
     private final CreatePersonUseCase createPersonUseCase;
 
     @Autowired
-    public CreatePersonController(CreatePersonUseCase createPersonUseCase) {
+    public CreatePersonController(final CreatePersonUseCase createPersonUseCase) {
         this.createPersonUseCase = createPersonUseCase;
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Long> createPerson(@RequestBody CreatePersonCommand command) {
+    public ResponseEntity<Long> createPerson(@RequestBody final CreatePersonCommand command) {
         return new ResponseEntity<>(createPersonUseCase.createPerson(command), HttpStatus.CREATED);
     }
 }

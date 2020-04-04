@@ -9,13 +9,13 @@ public class CreatePersonService implements CreatePersonUseCase {
     private final CreatePersonPort createPersonPort;
 
     @Autowired
-    public CreatePersonService(CreatePersonPort createPersonPort) {
+    public CreatePersonService(final CreatePersonPort createPersonPort) {
         this.createPersonPort = createPersonPort;
     }
 
     @Override
-    public Long createPerson(CreatePersonCommand command) {
-        Person person = new Person(null, command.getName(), command.getFirstName(), command.getAge());
+    public Long createPerson(final CreatePersonCommand command) {
+        final Person person = new Person(null, command.getName(), command.getFirstName(), command.getAge());
         return createPersonPort.createPerson(person);
     }
 }
