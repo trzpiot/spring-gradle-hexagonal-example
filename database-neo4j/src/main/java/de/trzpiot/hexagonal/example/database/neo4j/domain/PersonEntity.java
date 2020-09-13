@@ -11,10 +11,6 @@ public class PersonEntity {
     private String firstName;
     private Integer age;
 
-    /*
-     * We need this constructor, because Neo4j does not accept it when we create an object from this class and pass
-     * null as ID.
-     */
     public PersonEntity(final String name, final String firstName, final Integer age) {
         this.name = name;
         this.firstName = firstName;

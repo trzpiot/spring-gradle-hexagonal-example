@@ -12,6 +12,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Map;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+
 @Slf4j
 @ControllerAdvice
 public final class ExceptionControllerAdvice extends ResponseEntityExceptionHandler {
@@ -20,7 +22,7 @@ public final class ExceptionControllerAdvice extends ResponseEntityExceptionHand
 
     @ExceptionHandler(NotFoundException.class)
     ResponseEntity<Object> handle(final RuntimeException exception, final WebRequest request) {
-        final HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        final HttpStatus httpStatus = BAD_REQUEST;
         final Map<String, Object> errorAttributes = ErrorAttributes.getErrorAttributes(httpStatus, exception.getMessage(), request);
         log.warn("NotFoundException: {}", errorAttributes);
         return handleExceptionInternal(exception, errorAttributes, new HttpHeaders(), httpStatus, request);

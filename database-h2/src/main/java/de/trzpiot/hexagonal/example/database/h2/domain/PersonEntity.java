@@ -1,5 +1,6 @@
 package de.trzpiot.hexagonal.example.database.h2.domain;
 
+import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,8 +10,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
-// H2 needs a default constructor to create an object of this class.
-@NoArgsConstructor
+@NoArgsConstructor(force = true, access = AccessLevel.PRIVATE)
 public class PersonEntity {
     @Id
     @GeneratedValue
