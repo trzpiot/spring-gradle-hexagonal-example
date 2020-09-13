@@ -2,6 +2,8 @@ dependencies {
     // Internal project dependencies
     compile project(":core")
     compile project(":database-h2")
+    // Switch the database module to see the magic happens
+    //compile project(":database-neo4j")
     compile project(":rest")
 
     // Spring Boot Starters
