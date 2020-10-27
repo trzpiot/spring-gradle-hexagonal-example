@@ -6,8 +6,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-neo4j'
 
     // Neo4j
-    compile group: 'org.neo4j', name: 'neo4j', version: '3.5.21'
-    compile group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.15'
+    compile group: 'org.neo4j', name: 'neo4j', version: '3.5.22'
+    compile group: 'org.neo4j', name: 'neo4j-ogm-embedded-driver', version: '3.2.17'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok'
