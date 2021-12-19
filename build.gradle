@@ -9,7 +9,10 @@ allprojects {
     apply plugin: 'java-library'
     apply plugin: 'io.spring.dependency-management'
 
-    sourceCompatibility = 11
+    compileJava {
+        sourceCompatibility = 11
+        targetCompatibility = 11
+    }
 
     repositories {
         mavenCentral()
