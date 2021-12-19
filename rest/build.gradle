@@ -1,6 +1,6 @@
 dependencies {
     // Internal project dependencies
-    compile project(":core")
+    implementation project(":core")
 
     // Spring Boot Starters
     implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -10,5 +10,5 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     // Testing
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

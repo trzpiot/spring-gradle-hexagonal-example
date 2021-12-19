@@ -4,11 +4,11 @@ plugins {
 
 dependencies {
     // Internal project dependencies
-    compile project(":core")
-    compile project(":database-h2")
+    implementation project(":core")
+    implementation project(":database-h2")
     // Switch the database module to see the magic happens
-    //compile project(":database-neo4j")
-    compile project(":rest")
+    //implementation project(":database-neo4j")
+    implementation project(":rest")
 
     // Spring Boot Starters
     implementation 'org.springframework.boot:spring-boot-starter'
