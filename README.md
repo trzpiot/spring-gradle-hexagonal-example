@@ -13,8 +13,10 @@ For a detailed description of the example application with an explanation of cle
 #### Clone the project
 
 ```bash
-## HTTPS
+# HTTPS
 git clone https://github.com/trzpiot/spring-gradle-hexagonal-example.git
+
+# or
 
 # SSH
 git clone git@github.com:trzpiot/spring-gradle-hexagonal-example.git
