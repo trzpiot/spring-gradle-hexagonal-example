@@ -49,9 +49,9 @@ cd ..
 
 #### Request
 
-```json
-POST /person/create
+`POST /person/create`
 
+```json
 {
     "name": "Name",
     "firstName": "FirstName",
@@ -71,9 +71,7 @@ The ID of the created person entity.
 
 #### Request
 
-```json
-GET /person/get/{id}
-```
+`GET /person/get/{id}`
 
 #### Response
 
