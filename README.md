@@ -3,6 +3,7 @@
 A Spring example application with a hexagonal (clean) architecture & multi modules with Gradle.
 
 For a detailed description of the example application with an explanation of clean architecture, among other things, see here: TODO
+
 ## Prerequirements
 
 - JDK >= 11
@@ -42,6 +43,48 @@ cd ..
 ./gradlew bootRun
 ```
 
+## API
+
+### Create person
+
+#### Request
+
+```json
+POST /person/create
+
+{
+    "name": "Name",
+    "firstName": "FirstName",
+    "age": 44
+}
+```
+
+#### Response
+
+The ID of the created person entity.
+
+```json
+1
+```
+
+### Get person
+
+#### Request
+
+```json
+GET /person/get/{id}
+```
+
+#### Response
+
+```json
+{
+    "id": 1,
+    "name": "Name",
+    "firstName": "FirstName",
+    "age": 44
+}
+```
 
 ## FAQ
 
