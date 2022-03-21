@@ -6,7 +6,7 @@ For a detailed description of the example application with an explanation of cle
 
 ## Prerequirements
 
-- JDK >= 11
+- JDK >= 17
 - Docker
 - Docker Compose
 ## Run

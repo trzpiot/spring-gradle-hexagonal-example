@@ -15,7 +15,7 @@ public class CreatePersonService implements CreatePersonUseCase {
 
     @Override
     public Long createPerson(final CreatePersonCommand command) {
-        final Person person = new Person(null, command.getName(), command.getFirstName(), command.getAge());
+        final Person person = new Person(null, command.name(), command.firstName(), command.age());
         return createPersonPort.createPerson(person);
     }
 }
