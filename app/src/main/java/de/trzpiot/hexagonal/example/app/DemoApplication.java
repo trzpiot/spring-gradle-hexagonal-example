@@ -1,11 +1,12 @@
 package de.trzpiot.hexagonal.example.app;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import static org.springframework.boot.SpringApplication.run;
 
 @SpringBootApplication(scanBasePackages = "de.trzpiot.hexagonal.example")
 public class DemoApplication {
     public static void main(final String... args) {
-        SpringApplication.run(DemoApplication.class, args);
+        run(DemoApplication.class, args);
     }
 }

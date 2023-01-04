@@ -17,7 +17,7 @@ public interface ErrorAttributes {
         errorAttributes.put("status", httpStatus.value());
         errorAttributes.put("error", httpStatus.getReasonPhrase());
         errorAttributes.put("message", message);
-        final String requestURI = ((ServletRequestAttributes) request).getRequest().getRequestURI();
+        final var requestURI = ((ServletRequestAttributes) request).getRequest().getRequestURI();
         errorAttributes.put("path", requestURI);
         return errorAttributes;
     }
