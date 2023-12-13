@@ -1,0 +1,15 @@
+meta {
+  name: Get person
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/person/get/{{OBJECT_ID}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  OBJECT_ID: 
+}
