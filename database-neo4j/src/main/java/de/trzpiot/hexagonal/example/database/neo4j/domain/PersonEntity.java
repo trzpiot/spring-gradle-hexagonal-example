@@ -17,7 +17,7 @@ import static lombok.AccessLevel.PRIVATE;
 public class PersonEntity {
     @Id
     @GeneratedValue
-    private Long id;
+    private UUID id;
 
     private UUID objectId;
     private String name;
