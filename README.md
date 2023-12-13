@@ -56,9 +56,9 @@ You can use the [Bruno collection](/bruno) for testing the API ([What is Bruno?]
 
 ```json
 {
-    "name": "Name",
-    "firstName": "FirstName",
-    "age": 44
+  "name": "Name",
+  "firstName": "FirstName",
+  "age": 44
 }
 ```
 
@@ -81,8 +81,8 @@ The Object ID of the created person entity.
 ```json
 {
   "objectId": "b6b5a014-1829-4195-b7be-80b742455297",
-    "name": "Name",
-    "firstName": "FirstName",
-    "age": 44
+  "name": "Name",
+  "firstName": "FirstName",
+  "age": 44
 }
 ```
