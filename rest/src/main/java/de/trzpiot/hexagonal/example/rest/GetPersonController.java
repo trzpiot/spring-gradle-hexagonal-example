@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.UUID;
+
 import static org.springframework.http.HttpStatus.OK;
 
 @Slf4j
@@ -20,9 +22,9 @@ public class GetPersonController {
         this.getPersonUseCase = getPersonUseCase;
     }
 
-    @GetMapping("/get/{id}")
-    public ResponseEntity<Person> getPerson(@PathVariable final Long id) {
-        log.info("Request: /person/get/{}", id);
-        return new ResponseEntity<>(getPersonUseCase.getPerson(id), OK);
+    @GetMapping("/get/{objectId}")
+    public ResponseEntity<Person> getPerson(@PathVariable("objectId") final UUID objectId) {
+        log.info("Request: /person/get/{}", objectId);
+        return new ResponseEntity<>(getPersonUseCase.getPerson(objectId), OK);
     }
 }

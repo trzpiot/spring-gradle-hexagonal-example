@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Slf4j
 @Service
 public class GetPersonAdapter implements GetPersonPort {
@@ -18,9 +20,9 @@ public class GetPersonAdapter implements GetPersonPort {
     }
 
     @Override
-    public Person getPerson(final Long id) {
-        final var personEntity = getPersonRepository.findById(id).orElseThrow(() -> new NotFoundException(String.format("Person with ID '%d' not found", id)));
+    public Person getPerson(final UUID objectId) {
+        final var personEntity = getPersonRepository.findByObjectId(objectId).orElseThrow(() -> new NotFoundException(String.format("Person with Object ID '%s' not found", objectId)));
         log.info("[Neo4j] Get person: {}", personEntity);
-        return new Person(personEntity.getId(), personEntity.getName(), personEntity.getFirstName(), personEntity.getAge());
+        return new Person(personEntity.getObjectId(), personEntity.getName(), personEntity.getFirstName(), personEntity.getAge());
     }
 }

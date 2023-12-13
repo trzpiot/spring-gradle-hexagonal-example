@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.UUID;
+
 import static org.springframework.http.HttpStatus.CREATED;
 
 @Slf4j
@@ -21,7 +23,7 @@ public class CreatePersonController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Long> createPerson(@RequestBody final CreatePersonCommand command) {
+    public ResponseEntity<UUID> createPerson(@RequestBody final CreatePersonCommand command) {
         log.info("Request: /person/create | Body: {}", command);
         return new ResponseEntity<>(createPersonUseCase.createPerson(command), CREATED);
     }

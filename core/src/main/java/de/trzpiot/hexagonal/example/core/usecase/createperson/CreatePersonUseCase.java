@@ -1,6 +1,8 @@
 package de.trzpiot.hexagonal.example.core.usecase.createperson;
 
+import java.util.UUID;
+
 @FunctionalInterface
 public interface CreatePersonUseCase {
-    Long createPerson(CreatePersonCommand command);
+    UUID createPerson(final CreatePersonCommand command);
 }

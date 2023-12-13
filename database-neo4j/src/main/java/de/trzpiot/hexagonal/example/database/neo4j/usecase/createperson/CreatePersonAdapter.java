@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Slf4j
 @Service
 public class CreatePersonAdapter implements CreatePersonPort {
@@ -18,9 +20,9 @@ public class CreatePersonAdapter implements CreatePersonPort {
     }
 
     @Override
-    public Long createPerson(final Person person) {
+    public UUID createPerson(final Person person) {
         final var personEntity = new PersonEntity(person.name(), person.firstName(), person.age());
         log.info("[Neo4j] Create person: {}", personEntity);
-        return createPersonRepository.save(personEntity).getId();
+        return createPersonRepository.save(personEntity).getObjectId();
     }
 }

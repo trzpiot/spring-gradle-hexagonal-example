@@ -1,7 +1,9 @@
 package de.trzpiot.hexagonal.example.core.domain;
 
+import java.util.UUID;
+
 public record Person(
-        Long id,
+        UUID objectId,
         String name,
         String firstName,
         Integer age) {
