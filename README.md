@@ -1,14 +1,15 @@
 # spring-gradle-hexagonal-example
 
-A Spring example application with a hexagonal (clean) architecture & multi modules with Gradle.
+[![Maintenance](https://img.shields.io/maintenance/active/2023)](https://github.com/trzpiot/spring-gradle-hexagonal-example/commits/main)
 
-For a detailed description of the example application with an explanation of clean architecture, among other things, see here: TODO
+A Spring example application with a hexagonal (clean) architecture & multi modules with Gradle.
 
 ## Prerequirements
 
-- JDK >= 17
+- JDK >= 21
 - Docker
 - Docker Compose
+
 ## Run
 
 #### Clone the project
@@ -45,6 +46,8 @@ cd ..
 
 ## API
 
+You can use the [Bruno collection](/bruno) for testing the API ([What is Bruno?](https://github.com/usebruno/bruno)).
+
 ### Create person
 
 #### Request
@@ -61,29 +64,25 @@ cd ..
 
 #### Response
 
-The ID of the created person entity.
+The Object ID of the created person entity.
 
 ```json
-1
+"b6b5a014-1829-4195-b7be-80b742455297"
 ```
 
 ### Get person
 
 #### Request
 
-`GET /person/get/{id}`
+`GET /person/get/{objectId}`
 
 #### Response
 
 ```json
 {
-    "id": 1,
+  "objectId": "b6b5a014-1829-4195-b7be-80b742455297",
     "name": "Name",
     "firstName": "FirstName",
     "age": 44
 }
 ```
-
-## FAQ
-
-TODO
