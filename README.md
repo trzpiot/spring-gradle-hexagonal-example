@@ -1,6 +1,6 @@
 # spring-gradle-hexagonal-example
 
-[![Maintenance](https://img.shields.io/maintenance/active/2023)](https://github.com/trzpiot/spring-gradle-hexagonal-example/commits/main)
+[![Maintenance](https://img.shields.io/maintenance/yes/2024)](https://github.com/trzpiot/spring-gradle-hexagonal-example/commits/main)
 
 A Spring example application with a hexagonal (clean) architecture & multi modules with Gradle.
 
